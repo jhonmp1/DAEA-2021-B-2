@@ -1,0 +1,32 @@
+﻿@Model List<Lab12.Models.Persona>
+    @{
+        ViewBag.Title = "Listar";
+    }
+
+    <h2>Listado de personas</h2>
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">PersonaID</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Apellido</th>
+                <th scope="col">Fecha Nacimiento</th>
+                <th scope="col">Dirección</th>
+                <th scope="col">Email</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var persona in Model)
+            {
+                <tr>
+                    <th scope="row">@persona.PersonaID</th>
+                    <td>@persona.Nombre</td>
+                    <td>@persona.Apellido</td>
+                    <td>@persona.FechaNac</td>
+                    <td>@persona.Direccion</td>
+                    <td>@persona.Email</td>
+                </tr>
+            }
+        </tbody>
+    </table>
