@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{181B4C33-B877-4A96-8C99-D66CA1D564A4}</ProjectGuid>
+    <ProjectGuid>{926CE539-DF4A-4954-9056-16BED565A6C9}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>Lab06</RootNamespace>
-    <AssemblyName>Lab06</AssemblyName>
+    <RootNamespace>Presnetacion</RootNamespace>
+    <AssemblyName>Presnetacion</AssemblyName>
     <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -46,25 +46,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Cursos.cs">
+    <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Cursos.Designer.cs">
-      <DependentUpon>Cursos.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Persona.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Persona.Designer.cs">
-      <DependentUpon>Persona.cs</DependentUpon>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Cursos.resx">
-      <DependentUpon>Cursos.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Persona.resx">
-      <DependentUpon>Persona.cs</DependentUpon>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -87,6 +78,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Negocio\Negocio.csproj">
+      <Project>{2dc7c6a1-a62f-49c0-a8c4-c1bcf78e74fd}</Project>
+      <Name>Negocio</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

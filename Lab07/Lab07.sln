@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31613.86
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Datos", "Datos\Datos.csproj", "{57A079CB-CFA0-43C0-B4B5-4FC0CB20D55B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Negocio", "Negocio\Negocio.csproj", "{2DC7C6A1-A62F-49C0-A8C4-C1BCF78E74FD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Presnetacion", "Presnetacion\Presnetacion.csproj", "{926CE539-DF4A-4954-9056-16BED565A6C9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{57A079CB-CFA0-43C0-B4B5-4FC0CB20D55B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{57A079CB-CFA0-43C0-B4B5-4FC0CB20D55B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{57A079CB-CFA0-43C0-B4B5-4FC0CB20D55B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{57A079CB-CFA0-43C0-B4B5-4FC0CB20D55B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2DC7C6A1-A62F-49C0-A8C4-C1BCF78E74FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2DC7C6A1-A62F-49C0-A8C4-C1BCF78E74FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2DC7C6A1-A62F-49C0-A8C4-C1BCF78E74FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2DC7C6A1-A62F-49C0-A8C4-C1BCF78E74FD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{926CE539-DF4A-4954-9056-16BED565A6C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{926CE539-DF4A-4954-9056-16BED565A6C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{926CE539-DF4A-4954-9056-16BED565A6C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{926CE539-DF4A-4954-9056-16BED565A6C9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9771FAA8-E7DD-4B20-B2AC-3BF935FA9A39}
+	EndGlobalSection
+EndGlobal
