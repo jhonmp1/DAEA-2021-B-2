@@ -43,6 +43,7 @@ namespace Presnetacion
             this.dgDatos.Name = "dgDatos";
             this.dgDatos.Size = new System.Drawing.Size(560, 415);
             this.dgDatos.TabIndex = 0;
+            this.dgDatos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgDatos_CellContentClick);
             // 
             // txtNombre
             // 

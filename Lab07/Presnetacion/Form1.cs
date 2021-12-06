@@ -38,5 +38,10 @@ namespace Presnetacion
             dgDatos.DataSource = dt;
             dgDatos.Refresh();
         }
+
+        private void dgDatos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
