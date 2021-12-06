@@ -1,0 +1,108 @@
+﻿@model IEnumerable<Lab14.Categories>
+@{
+    ViewBag.Title = "Index";
+}
+
+@section Styles{
+    <link href="~/lib/datatables.net-bs4/dataTables.bootstrap4.min.css" rel="stylesheet" />
+}
+<div class="row">
+    <div class="col-12">
+        <div class="page-title-box d-sm-flex align-items-center justify-content-between">
+            <h4 class="mb-sm-0 font-size-18">Lista de Categorias</h4>
+        </div>
+    </div>
+</div>
+
+
+<p>
+    <!--Hipervínculo nombre, método-->
+    @*Html.ActionLink("Nueva Categoria", "Create")*@
+</p>
+
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-header">
+                <div class="float-end mb-1">
+                    <!--<a href="Categories/Create" class="btn btn-sm btn-primary"><i class="fas fa-plus"></i> Agregar Categoria</a>-->
+                    @Html.ActionLink("Agregar Categoria", "Create",null,
+                        new { @class = "btn btn-sm btn-primary" })
+                </div>
+            </div>
+
+            <div class="card-body">
+
+                <div class="table-responsive">
+                    <table id="tblLista" class="table table-sm table-bordered table-hover table-striped">
+                        <thead>
+                            <tr>
+                                <th>@Html.DisplayNameFor(model => model.CategoryID)</th>
+                                <th>@Html.DisplayNameFor(model => model.CategoryName)</th>
+                                <th>@Html.DisplayNameFor(model => model.Description)</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var categoria in Model)
+                            {
+                                <tr>
+                                    <th>@Html.DisplayFor(modelItem => categoria.CategoryID)</th>
+                                    <td>@Html.DisplayFor(modelItem => categoria.CategoryName)</td>
+                                    <td>@Html.DisplayFor(modelItem => categoria.Description)</td>
+                                    <td>
+                                        <!--Hipervinculo nombre, método-->
+                                        @Html.ActionLink("Editar", "Edit",
+                                            new { id = categoria.CategoryID },
+                                            new { @class = "btn btn-success btn-sm" }) |
+
+                                        @Html.ActionLink("Detalles", "Details",
+                                            new { id = categoria.CategoryID },
+                                            new { @class = "btn btn-primary btn-sm" }) |
+
+                                        @Html.ActionLink("Borrar", "Delete",
+                                            new { id = categoria.CategoryID },
+                                            new { @class = "btn btn-danger btn-sm" })
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+
+
+@section scripts{
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+    <script src="~/lib/datatables.net-bs4/dataTables.bootstrap4.min.js"></script>
+    <script>
+        "use strict"
+        window.addEventListener("load", () => {
+            var table;
+            $(document).ready(function () {
+
+                table = $('#tblLista').DataTable({
+                    //"dom": 'lrtip',
+                    "order": [[0, "asc"]],
+                    "language": {
+                        "url": "/Content/spanish.json"
+                    }
+                });
+
+            });
+        })
+
+    </script>
+}

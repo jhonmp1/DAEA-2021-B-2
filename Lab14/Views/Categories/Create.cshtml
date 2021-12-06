@@ -1,0 +1,54 @@
+﻿@model Categories
+@{
+    ViewBag.Title = "Create";
+}
+
+<div class="row">
+    <div class="col-12">
+        <div class="page-title-box d-sm-flex align-items-center justify-content-between">
+            <h4 class="mb-sm-0 font-size-18"><i class="fas fa-table"></i> Agregar Categoria</h4>
+        </div>
+    </div>
+</div>
+
+<br />
+
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+
+            <div class="card-body">
+                <form asp-action="Create" method="post">
+                    <div class="form-horizontal">
+
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                        <div class="form-group row" style="margin-bottom:1rem;">
+                            <label asp-for="CategoryName" class="col-form-label col-md-2" style="color:black">Nombre</label>
+                            <div class="col-md-6">
+                                @Html.EditorFor(model => model.CategoryName, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.CategoryName)
+                            </div>
+                        </div>
+
+                        <div class="form-group row" style="margin-bottom:1rem;">
+                            <label asp-for="Description" class="col-form-label col-md-2">Descripción</label>
+                            <div class="col-md-6">
+                                @Html.EditorFor(model => model.Description, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.Description)
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="submit" value="Create" class="btn btn-sm btn-primary" /> | 
+                            <!---<div class="btn btn-sm btn-danger">@Html.ActionLink("Cancelar", "Index")</div>-->
+                            <a class="btn btn-sm btn-danger" style="text-decoration: none" href="/">Cancelar</a>
+                        </div>
+
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
