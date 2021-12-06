@@ -115,5 +115,11 @@ namespace Lab03
         {
 
         }
+
+        private void btnCurso_Click(object sender, EventArgs e)
+        {
+            Curso curso = new Curso(conn);
+            curso.Show();
+        }
     }
 }

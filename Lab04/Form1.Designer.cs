@@ -43,11 +43,13 @@ namespace Lab03
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.txtServidor = new System.Windows.Forms.TextBox();
+            this.btnCurso = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.btnCurso);
             this.panel1.Controls.Add(this.btnPersona);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.btnDesconectar);
@@ -68,7 +70,7 @@ namespace Lab03
             // 
             // btnPersona
             // 
-            this.btnPersona.Location = new System.Drawing.Point(200, 191);
+            this.btnPersona.Location = new System.Drawing.Point(156, 191);
             this.btnPersona.Name = "btnPersona";
             this.btnPersona.Size = new System.Drawing.Size(75, 23);
             this.btnPersona.TabIndex = 13;
@@ -187,6 +189,16 @@ namespace Lab03
             this.txtServidor.TabIndex = 4;
             this.txtServidor.TextChanged += new System.EventHandler(this.txtServidor_TextChanged);
             // 
+            // btnCurso
+            // 
+            this.btnCurso.Location = new System.Drawing.Point(237, 191);
+            this.btnCurso.Name = "btnCurso";
+            this.btnCurso.Size = new System.Drawing.Size(75, 23);
+            this.btnCurso.TabIndex = 14;
+            this.btnCurso.Text = "Curso";
+            this.btnCurso.UseVisualStyleBackColor = true;
+            this.btnCurso.Click += new System.EventHandler(this.btnCurso_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -218,6 +230,7 @@ namespace Lab03
         private System.Windows.Forms.TextBox txtBaseDatos;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnPersona;
+        private System.Windows.Forms.Button btnCurso;
     }
 }
 
